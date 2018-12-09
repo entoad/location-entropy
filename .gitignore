@@ -1,3 +1,6 @@
 .idea/
+spark-warehouse/
+target/
 
 *.pyc
+*.iml

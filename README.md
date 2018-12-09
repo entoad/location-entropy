@@ -1,6 +1,14 @@
 Location Entropy
 ================
 
+### Project structure
+
+* [utils.py](/utils.py) - contains the function to calculate location entropy
+* [test_utils.py](/test_utils.py) - unit test
+* [airport-arrivals-entropy.ipynb](/airport-arrivals-entropy.ipynb) -
+notebook to showcase the analytics on a dataset using the function
+* [scala](/scala) - the Scala version of the solution
+
 ### Prerequisite
 
 * Python 2.7
@@ -42,9 +50,9 @@ However, such data skew will _unlikely_ undermine the performance of
 the data pipeline as Apache Spark is very efficient on group-by-count operations
 by performing map-side reduction.
 From my past experience,
-when counting clicks and views from user activity logs on TeraBytes scale,
+when counting clicks and views from user activity logs at Terabytes scale,
 Spark is very efficient,
-provided that I know there were skews in those logs.
+provided that I knew there were skews in those logs.
 In the case of calculating location entropy,
 data skew should not be a primary concern.
 
